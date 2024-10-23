@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Preview Design</title>
+    <style>
+
+      .container{
+        height: auto;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-around; */
+        margin: 100px;
+      }
+
+      .content {
+            height: auto;
+            width: 600px;
+            border: px solid black;
+            border-radius: 10px;
+            /* margin-right: 100px; */
+            padding: 10px 20px ;
+          
+        }
+
+      #mainimg {
+        /* height: 430px; */
+        height: auto;
+        width: 400px;
+        object-fit: cover;
+        border: 1px solid rgb(209, 16, 16);
+        box-shadow: 0px 4px 8px 1px rgb(125, 116, 116);
+        border-radius: 10px;
+        padding: 3px 3px;
+        /* margin-left: 10%; */
+        /* margin-top: 50px; */
+        cursor: pointer;
+      }
+     
+
+      #img1 {
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+        border: 1px solid gray;
+        margin: 10px;
+        margin-left: 40px;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .h1 {
+        font-size: 40px;
+        color: black;
+      }
+
+      .rs {
+        font-size: 25px ; 
+      }
+
+      .del {
+        color: gray;
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        #img1 {
+          margin-top: 40px;
+          margin-left: 1px;
+          display: inline-block;
+          flex-direction: row;
+        }
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/realme.webp" alt="realme" id="mainimg" />
+      <div id="priductimgcont">
+        <img src="img/realme1.jpg" id="img1" onclick="changeimg('img/realme1.jpg')" /> 
+        <img src="img/realme-original.webp" id="img1" onclick="changeimg('img/realme-original.webp')" /> 
+        <img src="img/realme-12-pro-plus-5.webp" id="img1" onclick="changeimg('img/realme-12-pro-plus-5.webp')" />
+        <img src="img/realme11.jpeg" id="img1" onclick="changeimg('img/realme11.jpeg')" />
+      </div>
+    
+      <div class="content">
+        <h2>realme 12 Pro 5G (Navigator Beige, 256 GB)  (8 GB RAM)</h2>
+        <img src="icon/money.png" alt="rs" height="30px" width="30px">
+        <b class="rs">26,999 <del class="del"><img src="icon/money.png" alt="rs" height="15px" width="15px">31,999</del></b> 
+        <span>
+          <h3>Highlights</h3>
+          <ul>
+            <li>8 GB RAM | 256 GB ROM</li>
+            <li>17.02 cm (6.7 inch) Full HD+ Display</li>
+            <li>50MP + 8MP + 32MP | 16MP Front Camera</li>
+            <li>5000 mAh Battery</li>
+            <li>Snapdragon 6 Gen 1 Processor</li>
+          </ul>
+
+          <h3>Description</h3>
+          In a world dominated by innovation, the realme 12 Pro 5G stands out as a beacon of excellence. It's not just a smartphone; it's a testament to realme's dedication to pushing the boundaries of what's possible. Elevate your mobile experience, capture moments with unprecedented clarity, and indulge in a device that seamlessly blends performance, design, and cutting-edge technology. Choose realme – where every feature is a step toward a future of limitless possibilities.
+        </span>
+      </div>
+    </div>
+    
+
+    <script>
+      function changeimg(imgname) {
+        const mainimg = document.getElementById("mainimg");
+        mainimg.src = imgname;
+      }
+    </script>
+  </body>
+</html>
